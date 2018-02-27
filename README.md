@@ -11,7 +11,6 @@ The example below creates a backup of the current user's profile directory in an
 @FOR /F "tokens=*" %%I IN ('gettimestamp') DO @SET TIMESTAMP=%%I
 @FOR /F "tokens=*" %%I IN ('getpassword MyPasswordTargetName') DO @SET PASSWORD=%%I
 
-@REM 7za <command> [<switches>...] <archive_name> [<file_names>...]
 @SET ZIP=7za.exe
 @SET ZIPOPTS=-r -tzip -mem=AES256 -p"%PASSWORD%"
 
